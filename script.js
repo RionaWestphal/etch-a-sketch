@@ -14,10 +14,8 @@ function makeGrid(gridSize) {
             let cell = document.createElement("div");
             cell.style.width = `${maxWidth/gridSize}px`;
             cell.style.height = `${maxHeight/gridSize}px`;
-            cell.style.background = "gray";
-            cell.style.borderStyle = "solid";
-            cell.style.borderColor = "black";
-            cell.style.borderWidth = "1px";
+            cell.style.background = "#ffe6fa";
+            cell.style.outline='1px solid black';
             cell.addEventListener('mouseenter',changeColor);
             cell.addEventListener('mouseleave',revertColor);
             row.appendChild(cell);
@@ -27,16 +25,16 @@ function makeGrid(gridSize) {
 }
 
 function changeColor(e) {
-    e.toElement.style.backgroundColor="pink";
+    e.toElement.style.backgroundColor="#cf7cbe";
 }
 
 function revertColor(e) {
-    e.fromElement.style.backgroundColor="gray";
+    e.fromElement.style.backgroundColor="#ffe6fa";
 }
 
 function promptSize(e) {
     gridSize = prompt("Input your desired grid size:");
-    if(gridSize <= 100) {
+    if(gridSize <= 100 && gridSize > 0) {
         removeGrid();
         makeGrid(gridSize);
     }

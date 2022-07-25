@@ -2,7 +2,42 @@
     background-color:"pink";
 }
 
-.grid {
-    width:960px;
-    height:400px;
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align:center;
+    background-color:#FFFFFF;
+}
+
+.title {
+    color:#cf7cbe;
+    font-size:40px;
+}
+
+.container {
+    display:flex;
+    gap:100px;
+    align-items:center;
+    margin-top:50px;
+}
+
+.left {
+    align-items:center;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:100px;
+}
+
+.right {
+    margin-right:200px;
+    margin-left:auto;
+}
+
+button {
+    background-color:#cf7cbe;
+    color:white;
+    font-size:24px;
+    border-radius:8px;
+    border-color:#ffe6fa;   
+    border-width:2px; 
+    padding:10px;
 }
