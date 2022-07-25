@@ -1,3 +1,8 @@
 .changeColor {
     background-color:"pink";
 }
+
+.grid {
+    width:960px;
+    height:400px;
+}
