@@ -11,10 +11,21 @@ function makeGrid() {
             cell.style.borderStyle = "solid";
             cell.style.borderColor = "black";
             cell.style.borderWidth = "1px";
+            cell.addEventListener('mouseenter',changeColor);
+            cell.addEventListener('mouseleave',revertColor);
             row.appendChild(cell);
         }
         container.appendChild(row);
     }
+}
+
+function changeColor(e) {
+    e.toElement.style.backgroundColor="pink";
+}
+
+function revertColor(e) {
+    e.fromElement.style.backgroundColor="gray";
+    console.log(e);
 }
 
 makeGrid();
